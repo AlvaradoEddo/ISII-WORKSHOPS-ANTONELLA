@@ -5,6 +5,6 @@ public class CarInsurance {
 	
 	int age;
 	char sex;
-	String maritalStatus;
+	String maritalStatus ;
 	
 }
