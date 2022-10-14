@@ -1,49 +1,58 @@
-import java.util.Scanner;
 package ec.edu.espol.workshops;
 
 public class CarInsurance {
-
-	int age = 0;
-	char sex = ' ';
-	String maritalStatus = "Hola" ;
-	int base_premium = 500;
-	boolean valid_license = false;
-  String venta = "";  
-	Scanner read = new Scanner (System.in);
-//Input age
-  System.out.println("Enter your age: ");
-  age = read.nextInt();
-//Input sex
-  System.out.println("Enter your sex F or M: ");
-  sex=Character.toUpperCase(read.next().charAt(0)); 
-  while (sex != 'M' && sex != 'F'){
-    if (sex != 'M' && sex != 'F'){
-       System.out.print("Please, just enter F or M \n");
-    System.out.println("Enter your sex: ");
-    sex=Character.toUpperCase(read.next().charAt(0)); 
-    }
-  }
-//Input marital status
-  System.out.println("Enter your marital status married or not married:");
-  maritalStatus=read.next(); 
-
-//Validations
-    if(sex == 'M' && maritalStatus.equals("not married") && age < 25) {
-		base_premium =  base_premium + 1500;
-    System.out.print(base_premium);
+	protected int age;
+	protected char gender;
+	protected boolean married;
+	
+	protected int basePremium = 500;
+	
+	private int premiumCalculator(boolean validLicense) {
+		if(validLicense == false) {
+			return -1;
+		}
+		if(this.age > 80) {
+			return -1;
+		}
+    if(this.gender=='M' && this.married==false && this.age < 25) {
+			this.basePremium=this.basePremium+1500;
+		}
+		if (this.gender== 'F' || this.married == true) {
+			this.basePremium=this.basePremium-200;
+		}
+		if(45 <= this.age && this.age < 65) {
+			this.basePremium=this.basePremium-100;
+		}
+		return this.basePremium;
+	}
+	public void setAge(int newAge) {
+		this.age = newAge;
+	}
+	public void setGender(char newGender) {
+		this.gender = newGender;
+	}
+	public void setMarried(boolean newMarried) {
+		this.married = newMarried;
+	}
+	public void setBasePremium(int newBase) {
+		this.basePremium = newBase;
 	}
 	
-	if(sex == 'F' && maritalStatus.equals("married") && age < 25) {
-		base_premium =  base_premium - 200;
+	public int getAge() {
+		return age;
+	}
+	public char getGender() {
+		return gender;
+	}
+	public boolean getMarried() {
+		return married;
+	}
+	public int getBasePremium(){
+		return basePremium;
+	}
+	public int getPremiumCalculator(boolean data_target) {
+		return this.premiumCalculator(data_target);
 	}
 	
-	if(age >= 45 && age < 65) {
-		base_premium =  base_premium - 100;
-	}
-	
-	if(age > 80) {
-		venta = "No se puede vender el vehículo";
-	}
-  }
 	
 }
