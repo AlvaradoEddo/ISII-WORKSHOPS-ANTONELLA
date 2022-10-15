@@ -25,8 +25,8 @@ public class CarInsurance {
 		}
 		return this.basePremium;
 	}
-	public void setAge(int newAge) {
-		this.age = newAge;
+	public void setAge(int age) {
+		this.age = age;
 	}
 	public void setSex(char newSex) {
 		this.sex = newSex;
