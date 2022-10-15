@@ -4,13 +4,12 @@ import ec.edu.espol.workshops.CarInsurance;
 
 public class Test {
 	public static void main (String [ ] args) {
-		System.out.println ("Empezamos la ejecución del programa");
-		CarInsurance Prueba = new CarInsurance();
-		Prueba.setAge(55);
-		Prueba.setGender('M');
-		Prueba.setMarried(false);
-		System.out.print(Prueba.getBasePremium());
-		
+		 System.out.println("Start");
+	        CarInsurance test = new CarInsurance();
+	        test.setAge(34);
+	        test.setSex('F');
+	        test.setMarried(true);
+	        System.out.println(test.getBasePremium());
 	}
 	
 }
