@@ -2,7 +2,7 @@ package ec.edu.espol.workshops;
 
 public class CarInsurance {
 	protected int age;
-	protected char gender;
+	protected char sex;
 	protected boolean married;
 	
 	protected int basePremium = 500;
@@ -14,10 +14,10 @@ public class CarInsurance {
 		if(this.age > 80) {
 			return -1;
 		}
-    if(this.gender=='M' && this.married==false && this.age < 25) {
+    if(this.sex=='M' && this.married==false && this.age < 25) {
 			this.basePremium=this.basePremium+1500;
 		}
-		if (this.gender== 'F' || this.married == true) {
+		if (this.sex== 'F' || this.married == true) {
 			this.basePremium=this.basePremium-200;
 		}
 		if(45 <= this.age && this.age < 65) {
@@ -28,8 +28,8 @@ public class CarInsurance {
 	public void setAge(int newAge) {
 		this.age = newAge;
 	}
-	public void setGender(char newGender) {
-		this.gender = newGender;
+	public void setSex(char newSex) {
+		this.sex = newSex;
 	}
 	public void setMarried(boolean newMarried) {
 		this.married = newMarried;
@@ -41,8 +41,8 @@ public class CarInsurance {
 	public int getAge() {
 		return age;
 	}
-	public char getGender() {
-		return gender;
+	public char getSex() {
+		return sex;
 	}
 	public boolean getMarried() {
 		return married;
@@ -53,6 +53,6 @@ public class CarInsurance {
 	public int getPremiumCalculator(boolean data_target) {
 		return this.premiumCalculator(data_target);
 	}
-	
+	// antoenlla end
 	
 }
