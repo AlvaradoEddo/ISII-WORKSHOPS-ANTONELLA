@@ -1,7 +1,7 @@
 package ec.edu.espol.workshops;
 
 public class CarInsurance {
-	protected int Age;
+	protected int age;
 	protected char sex;
 	protected boolean married;
 	
@@ -11,22 +11,22 @@ public class CarInsurance {
 		if(validLicense == false) {
 			return -1;
 		}
-		if(this.Age > 80) {
+		if(this.age > 80) {
 			return -1;
 		}
 		if (this.sex== 'F' || this.married == true) {
 			this.basePremium=this.basePremium-200;
 		}
-		if(this.sex=='M' && this.married==false && this.Age < 25) {
+		if(this.sex=='M' && this.married==false && this.age < 25) {
 			this.basePremium=this.basePremium+1500;
 		}
-		if(45 < this.Age && this.Age < 65) {
+		if(45 < this.age && this.age < 65) {
 			this.basePremium=this.basePremium-100;
 		}
 		return this.basePremium;
 	}
 	public void setAge(int newAge) {
-		this.Age = newAge;
+		this.age = newAge;
 	}
 	public void setSex(char newSex) {
 		this.sex = newSex;
@@ -39,7 +39,7 @@ public class CarInsurance {
 	}
 	
 	public int getAge() {
-		return Age;
+		return age;
 	}
 	public char getSex() {
 		return sex;
