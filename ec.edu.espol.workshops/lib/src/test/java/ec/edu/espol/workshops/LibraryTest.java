@@ -18,7 +18,7 @@ class LibraryTest {
         System.out.println("Start");
         CarInsurance test = new CarInsurance();
         test.setAge(34);
-        test.setSex('F');
+        test.setSex('F');	
         test.setMarried(true);
         System.out.println(test.getBasePremium());
     }
