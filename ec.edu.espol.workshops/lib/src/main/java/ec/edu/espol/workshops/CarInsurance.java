@@ -4,8 +4,13 @@ public class CarInsurance {
 	protected int age;
 	protected char sex;
 	protected boolean married;
-	
 	protected int basePremium = 500;
+	public CarInsurance(){}
+	public CarInsurance(int age, char sex,boolean married){
+		this.age=age;
+		this.sex=sex;
+		this.married=married;
+	}
 	
 	private int premiumCalculator(boolean validLicense) {
 		if(validLicense == false) {
@@ -14,7 +19,7 @@ public class CarInsurance {
 		if(this.age > 80) {
 			return -1;
 		}
-		if (this.sex== 'F' || this.married == true) {
+		if (this.sex== 'F' || this.married == true )  {
 			this.basePremium=this.basePremium-200;
 		}
 		if(this.sex=='M' && this.married==false && this.age < 25) {
@@ -53,6 +58,5 @@ public class CarInsurance {
 	public int getPremiumCalculator(boolean tarjeta) {
 		return this.premiumCalculator(tarjeta);
 	}
-	
 	
 }
