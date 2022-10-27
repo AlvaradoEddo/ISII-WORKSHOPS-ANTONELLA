@@ -28,8 +28,8 @@ public class CarInsurance {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public void setSex(char newSex) {
-		this.sex = newSex;
+	public void setSex(char string) {
+		this.sex = string;
 	}
 	public void setMarried(boolean newMarried) {
 		this.married = newMarried;
