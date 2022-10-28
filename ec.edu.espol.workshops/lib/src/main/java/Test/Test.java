@@ -9,23 +9,26 @@ public class Test {
 	        test.setAge(-15);
 	        test.setSex('F');
 	        test.setMarried(true);
-	        CarInsurance testTa = new CarInsurance(20,'F',true);
-	        CarInsurance testTb = new CarInsurance(46,'F',true);
-	        CarInsurance testTc = new CarInsurance(20,'M',false);
-	        CarInsurance testTd = new CarInsurance(40,'M',false);
-	        CarInsurance testTe = new CarInsurance(46,'M',false);
-	        CarInsurance testTf = new CarInsurance(20,'?',false);
-	        CarInsurance testTg = new CarInsurance(70,'F',false);
-	        CarInsurance testTh = new CarInsurance(90,'M',false);
-	        CarInsurance testTi = new CarInsurance(-90,'M',false);
-	        System.out.println(testTa.getPremiumCalculator(true));
-	        System.out.println(testTb.getPremiumCalculator(true));
-	        System.out.println(testTc.getPremiumCalculator(true));
-	        System.out.println(testTd.getPremiumCalculator(true));
-	        System.out.println(testTe.getPremiumCalculator(true));
-	        System.out.println(testTf.getPremiumCalculator(true));
-	        System.out.println(testTg.getPremiumCalculator(true));
-	        System.out.println(testTh.getPremiumCalculator(true));
-	        System.out.println(testTi.getPremiumCalculator(true));
+	        
+	        CarInsurance tests[] = new CarInsurance[10];
+	        
+	        tests[0] = new CarInsurance(20,'F',true);
+	        tests[1] = new CarInsurance(46,'F',true);
+	        tests[2] = new CarInsurance(20,'M',false);
+	        tests[3] = new CarInsurance(40,'M',false);
+	        tests[4] = new CarInsurance(46,'M',false);
+	        tests[5] = new CarInsurance(20,'?',false);
+	        tests[6] = new CarInsurance(70,'F',false);
+	        tests[7] = new CarInsurance(90,'M',false);
+	        tests[8] = new CarInsurance(-90,'M',false);
+	        
+	        for(int i=0; i<9; i++) {
+	        	try {
+	        		System.out.println(tests[i].getPremiumCalculator(true));
+	        	}catch(Exception e) {
+	        		System.out.println(e.getMessage());
+	        	}
+	        }
+	        
 	}		
 }
