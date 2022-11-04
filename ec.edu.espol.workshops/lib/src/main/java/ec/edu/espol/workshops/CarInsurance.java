@@ -24,7 +24,7 @@ public class CarInsurance {
         if(validLicense == false) {
             return -1;
         }
-        if(this.age > 80) {
+        if(this.age<18 || this.age > 80) {
             return -1;
         }
         if (this.sex== 'F' || this.married == true )  {
