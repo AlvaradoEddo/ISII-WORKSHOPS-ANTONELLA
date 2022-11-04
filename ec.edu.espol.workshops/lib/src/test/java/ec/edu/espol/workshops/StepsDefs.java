@@ -46,7 +46,7 @@ public class StepsDefs {
 	public void valid_age() {
 		carInsurance.setAge(-23);
 	}
-	@When("Validate the customer´s age in the premiunCalculator function")
+	@When("Validate the customer age in the premiunCalculator function")
 	public void we_valid_the_age() {
 		actualAnswer = carInsurance.getBasePremium();
 	}
@@ -60,7 +60,7 @@ public class StepsDefs {
 	public void citizen_sex() {
 		carInsurance.setSex('?');
 	}
-	@When(" Validate the customer´s sex in the premiunCalculator function ")
+	@When(" Validate the customer sex in the premiunCalculator function ")
 	public void we_valid_the_sex() {
 		actualAnswer = carInsurance.getBasePremium();
 	}
