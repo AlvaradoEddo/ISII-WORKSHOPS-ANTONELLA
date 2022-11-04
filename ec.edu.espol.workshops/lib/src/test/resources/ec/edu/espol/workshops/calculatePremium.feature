@@ -12,28 +12,28 @@ Feature: Validate if the license is valid
  When Validate the license in the premiunCalculator function 
  Then Shown -1  
  
- Feature: Validate if the customer큦 age is not negative 
+Feature: Validate if the customer age is not negative 
 
  Scenario: The customer writes their age 
  Given A negative number 
- When Validate the customer큦 age in the premiunCalculator function 
+ When Validate the customer age in the premiunCalculator function 
  Then Shown exception  
  
- Feature: Validate if the customer큦 sex is only 'F' or 'M' 
+Feature: Validate if the customer sex is only F or M 
 
  Scenario: The customer writes their sex 
  Given A diferent char or another sex 
- When Validate the customer큦 sex in the premiunCalculator function 
+ When Validate the customer sex in the premiunCalculator function 
  Then Shown exception  
  
- Feature: Calculate the insurance prime for a customer
+Feature: Calculate the insurance prime for a customer
 
  Scenario: The customer is an underage 
  Given Is an uderage
  When Calculate the premium
  Then Shown -1 
  
- Feature: Validate sex, age and marital status 
+Feature: Validate sex, age and marital status 
 
  Scenario: The customer writes their sex, age and marital status 
  Given Customer writes their "<sex>", "<age>" and "<married>"
