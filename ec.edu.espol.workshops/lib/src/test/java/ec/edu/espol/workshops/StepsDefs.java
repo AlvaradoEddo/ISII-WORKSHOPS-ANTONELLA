@@ -5,8 +5,6 @@ import io.cucumber.java.en.When;
 
 import static org.junit.Assert.*;
 
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
 
 public class StepsDefs {
 	private int actualAnswer;
