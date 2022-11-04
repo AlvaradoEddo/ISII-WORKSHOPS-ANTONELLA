@@ -7,3 +7,8 @@ Feature: Calculate the insurance prime for a customer no valid
     When Calculate the premium
     Then Shown -1
 
+  @tag2
+  Scenario: The customer is an underage
+  	Given A young of 17 year old no married
+  	When Calculate the premium
+  	Then Shown -1

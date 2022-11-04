@@ -17,6 +17,13 @@ public class StepsDefs {
 		carInsurance.setMarried(true);
 	}
 	
+	@Given("A young of 17 year old no married")
+	public void citizen_is_under18() {
+		carInsurance.setAge(17);
+		carInsurance.setSex('M');
+		carInsurance.setMarried(false);
+	}
+	
 	@When("Calculate the premium")
 	public void we_calculate_the_premium_validLecense() {
 		try {
@@ -24,15 +31,6 @@ public class StepsDefs {
 		}catch(Exception e) {
 			
 		}
-	}
-	@Then("Shown -1")
-	public void we_should_recive_over80(){
-		assertEquals(-1, actualAnswer);
-	} 
-	
-	@Given("An unvalid license")
-	public void valid_license() {
-		
 	}
 	
 	@When("Validate the license in the premiunCalculator function")
@@ -43,6 +41,14 @@ public class StepsDefs {
 			
 		}
 	}
+	
+	
+	@Then("Shown -1")
+	public void we_should_recive_over80(){
+		assertEquals(-1, actualAnswer);
+	} 
+
+
 	
 	
 	
