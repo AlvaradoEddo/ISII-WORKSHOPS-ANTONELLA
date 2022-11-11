@@ -6,12 +6,13 @@ public class CarInsurance {
     protected int age;
     protected char sex;
     protected boolean married;
+    protected String marry;
     protected int basePremium = 500;
     public CarInsurance(){}
-    public CarInsurance(int age, char sex,boolean married){
+    public CarInsurance(int age, char sex,String marry){
         this.age=age;
         this.sex=sex;
-        this.married=married;
+        this.marry=marry;
     }
     
     private int premiumCalculator(boolean validLicense) throws Exception {
@@ -27,6 +28,17 @@ public class CarInsurance {
         if(this.age < 18 || this.age > 80) {
             return -1;
         }
+        
+        if (marry != "yes" && marry != "no") {
+        	return -1;
+        }
+        if (marry == "yes") {
+        	married = true;
+        }
+        if (marry == "no") {
+        	married = false;
+        }
+       
         if (this.sex== 'F' || this.married == true )  {
             this.basePremium=this.basePremium-200;
         }
