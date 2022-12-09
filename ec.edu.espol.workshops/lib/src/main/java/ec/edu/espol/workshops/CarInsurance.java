@@ -6,7 +6,7 @@ public class CarInsurance {
     protected int age;
     protected char sex;
     protected boolean married;
-    protected int basePremium = 700;
+    protected int basePremium = 600;
     public CarInsurance(){}
     public CarInsurance(int age, char sex,boolean married){
         this.age=age;
