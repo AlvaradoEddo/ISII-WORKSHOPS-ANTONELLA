@@ -1,6 +1,6 @@
 package Test;
 import ec.edu.espol.workshops.CarInsurance;
 
-public class StatementCoverageTes {
-	
+public class BranchCoverageTest {
+
 }
