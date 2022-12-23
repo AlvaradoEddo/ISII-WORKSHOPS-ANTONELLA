@@ -15,15 +15,15 @@ public class CarInsurance {
     }
     
     private int premiumCalculator(boolean validLicense) throws Exception {
+        if(validLicense == false) {
+            return -1;
+        }
         if(this.sex!='F' && this.sex!='M')
             throw new Exception("Solo aceptamos genero masculino y femenino.");
         
         if(this.age<0)
             throw new Exception("La edad no puede ser negativa");
         
-        if(validLicense == false) {
-            return -1;
-        }
         if(this.age > 80) {
             return -1;
         }
