@@ -14,16 +14,18 @@ public class CarInsurance {
         this.married=married;
     }
     
-    private int premiumCalculator(boolean validLicense) throws Exception {
-        if(this.sex!='F' && this.sex!='M')
-            throw new Exception("Solo aceptamos genero masculino y femenino.");
-        
-        if(this.age<0)
-            throw new Exception("La edad no puede ser negativa");
-        
+    private int premiumCalculator(boolean validLicense){
+     
         if(validLicense == false) {
             return -1;
         }
+     
+        if(this.sex!='F' && this.sex!='M')
+            return -1;
+        
+        if(this.age<0)
+            return -1;
+        
         if(this.age > 80) {
             return -1;
         }
@@ -63,7 +65,7 @@ public class CarInsurance {
     public int getBasePremium(){
         return basePremium;
     }
-    public int getPremiumCalculator(boolean tarjeta) throws Exception {
+    public int getPremiumCalculator(boolean tarjeta) {
         return this.premiumCalculator(tarjeta);
     }
     
