@@ -23,8 +23,12 @@ public class CarInsurance {
         if(this.sex!='F' && this.sex!='M')
             return -1;
         
-        if(this.age<0)
+        if(this.age<=0)
             return -1;
+        
+        if(this.age<18)
+            return -1;
+        
         
         if(this.age > 80) {
             return -1;
@@ -37,6 +41,12 @@ public class CarInsurance {
         }
         if(45 < this.age && this.age < 65) {
             this.basePremium=this.basePremium-100;
+        }
+        if(this.married == true && this.age > 30 && this.age < 60) {
+            this.basePremium = this.basePremium - 50;
+        }
+        if(this.married == false && this.sex  == 'F' && this.age > 60) {
+            this.basePremium = this.basePremium - 50;
         }
         return this.basePremium;
     }
